@@ -11,7 +11,7 @@ public:
 	Node* next;
 
 	string row;
-	vector<string> column;
+	vector<string> column; //make array of int 0s and 1s
 };
 
 Node::Node(string vertex)
@@ -29,8 +29,7 @@ public:
 	~Hypergraph();
 
 	void insertNode(string);
-	void insertHyperEdge(string, string);
-	bool searchHypergraph(string);
+	void insertHyperEdge(string, string); 
 	void printHypergraph(string);
 	
 };
@@ -49,46 +48,21 @@ void Hypergraph::insertNode(string rows)
 	}
 	else
 	{
-		bool looksee = searchHypergraph(rows);
-		if (looksee == false)
+		Node* currentNode = root;
+		while(currentNode->next != NULL)
 		{
-			Node* currentNode = root;
-			while(currentNode->next != NULL)
-			{
-				currentNode = currentNode->next;
-			}
-			currentNode->next = new Node(rows);
+			currentNode = currentNode->next;
 		}
+		currentNode->next = new Node(rows);	
 	}
 }
 
-void Hypergraph::insertHyperEdge(string vertex, string edge);
+void Hypergraph::insertHyperEdge()
 {
-	bool looksee = searchHypergraph(edge);
-	if (looksee == true)
-	{
-		bool NotHereSee = true;
-		Node* currentNode = root;
-		while(currentNode->next != NULL && NotHereSee)
-		{
-			if (vertex != currentNode->row)
-			{
-				currentNode = currentNode->next;
-			}
-			else
-			{
-				NotHereSee = false;
-			}
-		}
-		if (NotHereSee == false)
-		{
-			for (std::vector<string>::iterator i = currentNode->column.begin(); i != currentNode->column.end(); ++i)
-			{
-				if (currentNode->column[i] == edge)
-				{
-					break
-				}
-			}
-		}
-	}
-}
+/* here we could do a linked list that goes to the right...
+	***
+		noperes we will have the cargo be the vertex (country) and an array
+		of 1s and 0s of the edges (traits of the flag)
+	***
+ */ 
+} 
