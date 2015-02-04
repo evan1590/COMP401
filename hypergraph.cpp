@@ -77,8 +77,18 @@ void Hypergraph::insertHyperData()
 		istringstream linestream(line);
 		string item;
 		int itemnum = 0;
+		string charatristic[30];
+		string nodeName;
 		while (getline (linestream, item, ',')) // gets each item in each line
 		{
+			if (itemnum == 0)
+			{
+				nodeName = item;
+			}
+			else
+			{
+				charatristic[itemnum - 1] = item;
+			} 
 			itemnum++;	
 		}
 	}	
