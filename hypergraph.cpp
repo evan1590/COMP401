@@ -42,6 +42,11 @@ Hypergraph::Hypergraph()
 	root = NULL;
 }
 
+Hypergraph::~Hypergraph()
+{
+    cout << "[Hypergraph DTRO (Killed)]" << endl;
+}
+
 void Hypergraph::insertNode(string vertexs)
 {
 	Node* newNode = new Node(vertexs);
@@ -90,14 +95,16 @@ void Hypergraph::insertHyperData()
 			{
 				charatristic[itemnum - 1] = item;
 			}
-			for (int i = 0; i < 30; ++i)
-			{
-				cout << "Country: " << nodeName << endl;
-				cout << "charatristic: " << charatristic[i] ;
-			}
-			cout << endl;
+
 			itemnum++;
 		}
+		cout << "Country: " << nodeName << endl;
+        cout << "characteristics: ";
+        for (int i = 0; i < 30; ++i)
+        {
+            cout << charatristic[i] ;
+        }
+        cout << endl;
 	}
 }
 
