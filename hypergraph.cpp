@@ -13,13 +13,14 @@ public:
 
 	string row;
 	//make array of int 0s and 1s
-	string Data[30];
+	string* Data;
 };
 
 Node::Node(string vertex, string* edges)
 {
+    int a = 30;
 	this->row = vertex;
-	this->Data = new string* edges[30];
+    this->Data = new string[a];
 	this->next = NULL;
 }
 
