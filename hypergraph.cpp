@@ -11,13 +11,15 @@ public:
 	Node* next;
 
 	string row;
-	vector<string> column; //make array of int 0s and 1s
+	//make array of int 0s and 1s
+	int Data[5]; 
 };
 
 Node::Node(string vertex)
 {
 	this->row = vertex;
-	this->next = NULL; 
+	this->Data = edges;
+	this->next = NULL;
 }
 
 class Hypergraph
@@ -28,8 +30,8 @@ public:
 	Hypergraph();
 	~Hypergraph();
 
-	void insertNode(string);
-	void insertHyperEdge(string, string); 
+	void insertNode(string, );
+	void insertHyperData(); 
 	void printHypergraph(string);
 	
 };
@@ -39,12 +41,13 @@ Hypergraph::Hypergraph()
 	root = NULL;
 }
 
-void Hypergraph::insertNode(string rows)
+void Hypergraph::insertNode(string vertex, int edges[29])
 {
+	newNode = new Node(vertex, edges)
 	if (root == NULL)
 	{
-		root = new Node(rows);
-		cout<< "Root is: " << root->rows << endl;
+		root = newNode;
+		cout<< "Root is: " << root->vertex << endl;
 	}
 	else
 	{
@@ -53,11 +56,11 @@ void Hypergraph::insertNode(string rows)
 		{
 			currentNode = currentNode->next;
 		}
-		currentNode->next = new Node(rows);	
+		currentNode->next = newNode;	
 	}
 }
 
-void Hypergraph::insertHyperEdge()
+void Hypergraph::insertHyperData()
 {
 /* here we could do a linked list that goes to the right...
 	***
@@ -65,4 +68,27 @@ void Hypergraph::insertHyperEdge()
 		of 1s and 0s of the edges (traits of the flag)
 	***
  */ 
-} 
+	ifstream infile ("csv.dat");
+	string line;
+	int linenum = 0;
+	while(getline (infile, line)) // gets each line
+	{
+		linenum++;
+		istringstream linestream(line);
+		string item;
+		int itemnum = 0;
+		while (getline (linestream, item, ',')) // gets each item in each line
+		{
+			itemnum++;	
+		}
+	}	
+}
+
+int main()
+{
+	Hypergraph graph;
+
+	Hypergraph.insertHyperData;
+	return 0;
+}
+ 
