@@ -7,19 +7,19 @@ using namespace std;
 class Node
 {
 public:
-	Node(string);
+	Node(string, string*);
 	~Node();
 	Node* next;
 
 	string row;
 	//make array of int 0s and 1s
-	//int Data[5];
+	string * Data[30];
 };
 
-Node::Node(string vertex)
+Node::Node(string vertex, string* edges)
 {
 	this->row = vertex;
-	//this->Data = edges;
+	//this->Data = edges[30];
 	this->next = NULL;
 }
 
@@ -31,7 +31,7 @@ public:
 	Hypergraph();
 	~Hypergraph();
 
-	void insertNode(string);
+	void insertNode(string, string*);
 	void insertHyperData();
 	void printHypergraph(string);
 
@@ -47,13 +47,18 @@ Hypergraph::~Hypergraph()
     cout << "[Hypergraph DTRO (Killed)]" << endl;
 }
 
-void Hypergraph::insertNode(string vertexs)
+void Hypergraph::insertNode(string vertex, string* edges)
 {
-	Node* newNode = new Node(vertexs);
+	Node* newNode = new Node(vertex, edges);
 	if (root == NULL)
 	{
 		root = newNode;
 		cout<< "Root is: " << root->row << endl;
+		for (int i = 0; i < 30; ++i)
+		{
+			cout << "characteristics are: " << &root->Data[i] << endl;
+		}
+
 	}
 	else
 	{
@@ -68,12 +73,6 @@ void Hypergraph::insertNode(string vertexs)
 
 void Hypergraph::insertHyperData()
 {
-/* here we could do a linked list that goes to the right...
-	***
-		noperes we will have the cargo be the vertex (country) and an array
-		of 1s and 0s of the edges (traits of the flag)
-	***
- */
 	ifstream infile ("csv.dat");
 	string line;
 	int linenum = 0;
@@ -98,13 +97,14 @@ void Hypergraph::insertHyperData()
 
 			itemnum++;
 		}
-		cout << "Country: " << nodeName << endl;
-        cout << "characteristics: ";
-        for (int i = 0; i < 30; ++i)
-        {
-            cout << charatristic[i] ;
-        }
-        cout << endl;
+		insertNode(nodeName, charatristic);
+		// cout << "Country: " << nodeName << endl;
+  //       cout << "characteristics: ";
+  //       for (int i = 0; i < 30; ++i)
+  //       {
+  //           cout << charatristic[i] ;
+  //       }
+  //       cout << endl;
 	}
 }
 
