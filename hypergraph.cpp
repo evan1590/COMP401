@@ -9,10 +9,9 @@ class Node
 public:
 	Node(string, string*);
 	~Node();
-	Node* next;
 
+	Node* next;
 	string row;
-	//make array of int 0s and 1s
 	string* Data;
 };
 
@@ -38,8 +37,9 @@ public:
 
 	void insertNode(string, string*);
 	void insertHyperData();
-	void printHypergraph(string);
+	void printHypergraph();
 
+	friend ostream& operator<<(ostream& Sout, const Hypergraph&);
 };
 
 Hypergraph::Hypergraph()
@@ -58,11 +58,11 @@ void Hypergraph::insertNode(string vertex, string* edges)
 	if (root == NULL)
 	{
 		root = newNode;
-		cout<< "Root is: " << root->row << endl;
-		for (int i = 0; i < 29; ++i)
-		{
-			cout << "characteristics are: " << root->Data[i] << endl;
-		}
+		// cout<< "Root is: " << root->row << endl;
+		// for (int i = 0; i < 29; ++i)
+		// {
+		// 	cout << "characteristics are: " << root->Data[i] << endl;
+		// }
 
 	}
 	else
@@ -113,10 +113,27 @@ void Hypergraph::insertHyperData()
 	}
 }
 
+ostream& operator<<(ostream& Sout, const Hypergraph& S)
+{
+	Node* currentNode = S.root;
+	while(currentNode->next != NULL)
+	{
+		cout << currentNode->row << ": " ;
+		for (int i = 0; i < 29; ++i)
+		{
+			cout << currentNode->Data[i];
+			cout << "\t" ;
+		}
+		cout << endl;
+		currentNode = currentNode->next;
+	}
+}
+
 int main()
 {
 	Hypergraph graph;
 
 	graph.insertHyperData();
+	cout << graph;
 	return 0;
 }
