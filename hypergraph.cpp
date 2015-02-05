@@ -21,6 +21,10 @@ Node::Node(string vertex, string* edges)
     int a = 30;
 	this->row = vertex;
     this->Data = new string[a];
+    for (int i = 0; i < a; ++i)
+    {
+    	this->Data[i] = edges[i];
+    }
 	this->next = NULL;
 }
 
@@ -55,9 +59,9 @@ void Hypergraph::insertNode(string vertex, string* edges)
 	{
 		root = newNode;
 		cout<< "Root is: " << root->row << endl;
-		for (int i = 0; i < 30; ++i)
+		for (int i = 0; i < 29; ++i)
 		{
-			cout << "characteristics are: " << &root->Data[i] << endl;
+			cout << "characteristics are: " << root->Data[i] << endl;
 		}
 
 	}
@@ -99,13 +103,13 @@ void Hypergraph::insertHyperData()
 			itemnum++;
 		}
 		insertNode(nodeName, charatristic);
-		// cout << "Country: " << nodeName << endl;
-  //       cout << "characteristics: ";
-  //       for (int i = 0; i < 30; ++i)
-  //       {
-  //           cout << charatristic[i] ;
-  //       }
-  //       cout << endl;
+		 // cout << "Country: " << nodeName << endl;
+   //       cout << "characteristics: ";
+   //       for (int i = 0; i < 30; ++i)
+   //       {
+   //           cout << charatristic[i] ;
+   //       }
+   //       cout << endl;
 	}
 }
 
