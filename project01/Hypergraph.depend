@@ -1,0 +1,43 @@
+# depslib dependency file v1.0
+1423591344 source:c:\users\evan\desktop\hypergraph\hypergraph.cpp
+	<iostream>
+	"Hypergraph.h"
+
+1423591185 c:\users\evan\desktop\hypergraph\hypergraph.h
+	<iostream>
+	<fstream>
+	<sstream>
+
+1423590714 source:c:\users\evan\desktop\hypergraph\main.cpp
+	<iostream>
+	"Hypergraph.h"
+
+1423589189 c:\users\evan\desktop\hypergraph\hypergraph.cpp
+	"Hypergraph.h"
+
+1423591344 source:c:\users\evan\desktop\project01\hypergraph.cpp
+	<iostream>
+	"Hypergraph.h"
+
+1423591185 c:\users\evan\desktop\project01\hypergraph.h
+	<iostream>
+	<fstream>
+	<sstream>
+
+1423590714 source:c:\users\evan\desktop\project01\main.cpp
+	<iostream>
+	"Hypergraph.h"
+
+1423591344 source:c:\users\evan\documents\github\comp401\project01\hypergraph.cpp
+	<iostream>
+	"Hypergraph.h"
+
+1423591185 c:\users\evan\documents\github\comp401\project01\hypergraph.h
+	<iostream>
+	<fstream>
+	<sstream>
+
+1423590714 source:c:\users\evan\documents\github\comp401\project01\main.cpp
+	<iostream>
+	"Hypergraph.h"
+
