@@ -28,9 +28,10 @@
 	<iostream>
 	"Hypergraph.h"
 
-1423591344 source:c:\users\evan\documents\github\comp401\project01\hypergraph.cpp
+1423665152 source:c:\users\evan\documents\github\comp401\project01\hypergraph.cpp
 	<iostream>
-	"Hypergraph.h"
+	<fstream>
+	<sstream>
 
 1423591185 c:\users\evan\documents\github\comp401\project01\hypergraph.h
 	<iostream>

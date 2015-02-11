@@ -131,7 +131,7 @@ void Hypergraph::insertHyperData()
 // ==========================================================\
 
 {
-	ifstream infile ("csv.dat");
+	ifstream infile ("./data/data10000.dat");
 	string line;
 	int linenum = 0;
 	while(getline (infile, line)) // gets each line
@@ -185,13 +185,14 @@ ostream& operator<<(ostream& Sout, const Hypergraph& S)
 		cout << endl;
 		currentNode = currentNode->next;
 	}
-}
-
-int main()
-{
-	Hypergraph graph;
-
-	graph.insertHyperData();
-	cout << graph;
-	return 0;
+	if (currentNode->next == NULL)
+    {
+        cout << currentNode->row << ": " ;
+		for (int i = 0; i < 29; ++i)
+		{
+			cout << currentNode->Data[i];
+			cout << "\t" ;
+		}
+		cout << endl;
+    }
 }
