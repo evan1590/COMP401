@@ -23,13 +23,19 @@ Implementation of a hypergraph:
 * Insethyperedge seems to only take O(n^2) time. This is because it will grab each line one at a time then grab each element of that line within a nested while loop
 
 ### Contents:
-#### project01 one contains the following files
+project01 one contains the following files
 * Hypergraph.h - header file 
 * Hypergraph.cpp - implementation of the Hypergraph
 
-#### Data file contains:
+Data file contains:
 * csv.dat - 194 countries and their flag characteristics
 * dataTen.dat - 10 countries and their flag characteristics
 * data1000.dat - 1000 countries and their flag characteristics
 * data2000.dat - 2000 countries and their flag characteristics
 * data10000.dat - 10000 countries and their flag characteristics
+
+### References:
+1. http://xlinux.nist.gov/dads//HTML/hypergraph.html
+2. http://xlinux.nist.gov/dads//HTML/hyperedge.html
+3. http://en.wikipedia.org/wiki/Hypergraph
+4. http://archive.ics.uci.edu/ml/machine-learning-databases/flags/flag.data
