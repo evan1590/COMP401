@@ -14,17 +14,17 @@ A Hypergraph is a data structure. Its definition is a graph whose hyperedges con
 ###Implementation 
 
 implementation of a hypergraph:
-* inseretNode - inserts a new vertex into the graph
-* insertHyperedge - grabs data from a tex file and then inserts the 					  data by calling insertNode
+* inseretNode - inserts a new vertex into the graph. This takes O(1) time. 
+* insertHyperedge - grabs data from a tex file and then inserts the data by calling insertNode
 
 * The << operator is overloaded to allow for the graph to be printed out in a semi formatted way. 
 
 ### Contents:
-# project01 one contains the following files
+#### project01 one contains the following files
 * Hypergraph.h - header file 
 * Hypergraph.cpp - implementation of the Hypergraph
 
-# data file contains:
+#### data file contains:
 * csv.dat - 194 countries and their flag charaterastics
 * dataTen.dat - 10 countries and their flag charaterastics
 * data1000.dat - 1000 countries and their flag charaterastics
