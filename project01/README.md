@@ -20,13 +20,13 @@ implementation of a hypergraph:
 * The << operator is overloaded to allow for the graph to be printed out in a semi formatted way. 
 
 ### Contents:
-* project01 one contains the following files
-..* Hypergraph.h - header file 
-..* Hypergraph.cpp - implementation of the Hypergraph
+# project01 one contains the following files
+* Hypergraph.h - header file 
+* Hypergraph.cpp - implementation of the Hypergraph
 
-* data file contains:
-..* csv.dat - 194 countries and their flag charaterastics
-..* dataTen.dat - 10 countries and their flag charaterastics
-..* data1000.dat - 1000 countries and their flag charaterastics
-..*	data2000.dat - 2000 countries and their flag charaterastics
-..*	data10000.dat - 10000 countries and their flag charaterastics
+# data file contains:
+* csv.dat - 194 countries and their flag charaterastics
+* dataTen.dat - 10 countries and their flag charaterastics
+* data1000.dat - 1000 countries and their flag charaterastics
+* data2000.dat - 2000 countries and their flag charaterastics
+* data10000.dat - 10000 countries and their flag charaterastics
