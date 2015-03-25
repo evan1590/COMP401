@@ -5,6 +5,9 @@ $( document ).ready(function() {
         var y = $('.inputfield2').val();
         console.log(x);
         console.log(y);
+        // if (y == 0) {
+        // 	console.log("got you")
+        // }; trying to figure out what goes wrong
         levenshteinDist(x, y);
     });
 });
@@ -16,9 +19,17 @@ function levenshteinDist(string1, string2) {
     var indexI; 
     var indexJ;
  
-    if (word == 0) return newWord;
+    if (word == 0) {
+    	console.log(newWord);
+    	alert(newWord);
+    	return newWord;
+    };
     
-    if (newWord == 0) return word;
+    if (newWord == 0) {
+    	console.log(word);
+    	alert(word);
+    	return word;
+    };
  
  	//first column of each row
     for (indexI = 0; indexI <= word; indexI++)
@@ -38,4 +49,5 @@ function levenshteinDist(string1, string2) {
         }
     }
     console.log(matrix[word][newWord]);
+    alert(matrix[word][newWord]);
 }
