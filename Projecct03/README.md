@@ -11,10 +11,13 @@ The Levenshtein distance algorithm is finding the least amount of changes to tra
 
 * An example of this in in the HTML file.
 
-###Implementation
-
 ### Contents:
 project03 contains the following files
 * index.html - front end HTML file 
 * levenstein.js - Implementation of the Levenshtein Distance Algorithm
 
+### References:
+1. http://www.let.rug.nl/kleiweg/lev/
+2. http://www.levenshtein.net/
+3. http://en.wikipedia.org/wiki/Levenshtein_distance
+4. https://www.youtube.com/watch?v=aEIhvv5p-V8
